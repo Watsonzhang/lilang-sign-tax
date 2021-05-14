@@ -1,0 +1,36 @@
+package com.zhangwei.excel;
+
+import com.alibaba.excel.annotation.ExcelProperty;
+import com.alibaba.excel.annotation.write.style.ColumnWidth;
+import com.alibaba.excel.annotation.write.style.ContentRowHeight;
+import com.alibaba.excel.annotation.write.style.HeadRowHeight;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+/**
+ * @Author: zhangwei
+ * @Description:
+ * @Date:Create：2021/4/23 下午4:23
+ */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+//内容高度
+@ContentRowHeight(25)
+//表头行高度
+@HeadRowHeight(25)
+//列的宽度
+@ColumnWidth(25)
+public class UserBo {
+    @ExcelProperty("姓名")
+    private String name;
+
+    @ExcelProperty("性别")
+    private String sex;
+
+    @ExcelProperty("年龄")
+    private String age;
+}
